@@ -61,7 +61,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        if(Yii::$app->user->isGuest){
+            Yii::$app->view->theme = new \yii\base\Theme([
+                'pathMap' => ['@app/views' => '@app/themes/canvas'],
+                'baseUrl' => '@web/themes/canvas',
+            ]);
+              return $this->render('index');
+        }
+        else{
+            return $this->render('indexx');
+        }
     }
 
     public function actionIndexx()

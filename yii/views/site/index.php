@@ -103,7 +103,7 @@ $bu = Url::base();
 
     <?php $this->head() ?>
 
-    <title>NexWave Indonesia</title>
+    <title>Personal</title>
     <!-- <script src='https://www.google.com/recaptcha/api.js?onload=recaptchacallback&render=explicit'></script> -->
 </head>
 
