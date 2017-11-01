@@ -38,18 +38,19 @@
         <div class="row">
             <div class="col-lg-3">
                 <h2>Heading</h2>
-                                <div class="portlet light">
-                                    <div class="card-icon">
-                                        <i class="icon-user-follow font-red-sunglo theme-font"></i>
-                                    </div>
-                                    <div class="card-title">
-                                        <span> Best User Expierence </span>
-                                    </div>
-                                    <div class="card-desc">
-                                        <span> The best way to find yourself is
-                                            <br> to lose yourself in the service of others </span>
-                                    </div>
-                                </div>
+                
+                <div class="portlet light">
+                    <div class="card-icon">
+                        <i class="icon-user-follow font-red-sunglo theme-font"></i>
+                    </div>
+                    <div class="card-title">
+                        <span> Best User Expierence </span>
+                    </div>
+                    <div class="card-desc">
+                        <span> The best way to find yourself is
+                            <br> to lose yourself in the service of others </span>
+                    </div>
+                </div>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>

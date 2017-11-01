@@ -1,45 +1,45 @@
-<?php 
-use yii\helpers\Url;
-use yii\helpers\Html;
-use app\components\Analytics;
-use app\components\JavaScriptPacker;
+<?php
 
-$id_username = "u".uniqid();
-$id_password = "p".uniqid();
-$id_form = "f".uniqid();
-$id_forgot_form = "ff".uniqid();
-$c = $this->context->id;
-$a = $this->context->action->id;
-$bu = Url::base();
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use app\assets\AppAsset;
+use yii\helpers\Url;
+
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="SemiColonWeb" />
 
     <!-- Stylesheets
     ============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700,900|Playfair+Display:400,700" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/style.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/dark.css" type="text/css" />
 
     <!-- Resume Specific Stylesheet -->
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/demos/resume/resume.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/demos/resume/css/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/demos/resume/resume.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/demos/resume/css/fonts.css" type="text/css" />
     <!-- / -->
 
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/magnific-popup.css" type="text/css" />
 
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/responsive.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="<?php echo \yii::$app->view->theme->baseUrl; ?>/css/colors.php?color=7B6ED6" type="text/css" />
+    <link rel="stylesheet" href="<?= Url::base() ?>/themes/canvas/css/colors.php?color=7B6ED6" type="text/css" />
 
     <!-- Document Title
     ============================================= -->
@@ -52,21 +52,17 @@ $bu = Url::base();
             .slider-caption .button { display: block !important; }
         }
     </style>
-<?php $this->head() ?>
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 </head>
-
-    
-
-<body class="stretched sticky-responsive-menu">
-<?php $this->beginbody();?>
-    <!-- Document Wrapper
-    ============================================= -->
+<body>
+<?php $this->beginBody() ?>
     <div id="wrapper" class="clearfix">
 
         <!-- Header
         ============================================= -->
         <header id="header" class="transparent-header sticky-transparent static-sticky">
-
             <div id="header-wrap">
 
                 <div class="container clearfix">
@@ -102,7 +98,7 @@ $bu = Url::base();
         </header><!-- #header end -->
 
         <section id="slider" class="full-screen force-full-screen clearfix">
-            <div class="full-screen force-full-screen blurred-img" style="position: fixed; width: 100%; background: #FFF url('demos/resume/images/hero-image/1.jpg') no-repeat top center; background-size: cover; background-attachment: fixed;">
+            <div class="full-screen force-full-screen blurred-img" style="position: fixed; width: 100%; background: #FFF url('<?= Url::base() ?>/themes/canvas/demos/resume/images/hero-image/1.jpg') no-repeat top center; background-size: cover; background-attachment: fixed;">
 
                 <div class="container clearfix">
                     <div class="slider-caption dark slider-caption-right" style="width: 100%; max-width: 430px;">
@@ -222,7 +218,7 @@ $bu = Url::base();
                     </div>
                 </div>
 
-                <div id="section-about" class="section page-section nomargin clearfix" style="background: #EEE url('demos/resume/images/sections/1.jpg') no-repeat center center; background-size: cover; padding: 100px 0">
+                <div id="section-about" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/demos/resume/images/sections/1.jpg') no-repeat center center; background-size: cover; padding: 100px 0">
                     <div class="container clearfix">
                         <div class="row clearfix">
                             <div class="col-sm-5 col-sm-offset-7 clearfix">
@@ -358,7 +354,7 @@ $bu = Url::base();
                     </div>
                 </div>
 
-                <div id="section-works" class="section page-section nomargin clearfix" style="background: #EEE url('demos/resume/images/sections/2.jpg') no-repeat center right; background-size: cover; padding: 100px 0">
+                <div id="section-works" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/demos/resume/images/sections/2.jpg') no-repeat center right; background-size: cover; padding: 100px 0">
                     <div class="container clearfix">
                         <div class="row clearfix">
                             <div class="col-md-5 col-md-offset-1">
@@ -413,7 +409,7 @@ $bu = Url::base();
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/1.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="<?= Url::base() ?>/themes/demos/resume/images/blog/1.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -430,7 +426,7 @@ $bu = Url::base();
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/2.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/2.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -447,7 +443,7 @@ $bu = Url::base();
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/3.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/3.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -564,12 +560,12 @@ $bu = Url::base();
 
     <!-- External JavaScripts
     ============================================= -->
-    <script type="text/javascript" src="<?php echo \yii::$app->view->theme->baseUrl; ?>/js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo \yii::$app->view->theme->baseUrl; ?>/js/plugins.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/jquery.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/plugins.js"></script>
 
     <!-- Footer Scripts
     ============================================= -->
-    <script type="text/javascript" src="<?php echo \yii::$app->view->theme->baseUrl; ?>/js/functions.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/functions.js"></script>
 
     <script>
         $(window).scroll(function() {
@@ -578,7 +574,7 @@ $bu = Url::base();
             $(".blurred-img").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
         });
     </script>
-<?php $this->endbody();?>
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

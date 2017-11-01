@@ -78,6 +78,12 @@ class SiteController extends Controller
         return $this->render('indexx');
     }
 
+    public function actionIndex2()
+    {
+        $this->layout = 'main3';
+        return $this->render('index2');
+    }
+
     /**
      * Login action.
      *
