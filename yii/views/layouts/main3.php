@@ -127,7 +127,10 @@ AppAsset::register($this);
                                     <a href="#"><i class="icon-html5" style="color: #DDD"></i></a>
                                 </div>
                                 <h3 class="t400 ls2" style="color: #FFF">HTML5</h3>
-                                <p style="color:#AAA;">Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                                                    <?= Breadcrumbs::widget([
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]) ?>
+                    <?= $content ?>
                             </div>
                         </div>
 
@@ -218,7 +221,7 @@ AppAsset::register($this);
                     </div>
                 </div>
 
-                <div id="section-about" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/demos/resume/images/sections/1.jpg') no-repeat center center; background-size: cover; padding: 100px 0">
+                <div id="section-about" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/canvas/demos/resume/images/sections/1.jpg') no-repeat center center; background-size: cover; padding: 100px 0">
                     <div class="container clearfix">
                         <div class="row clearfix">
                             <div class="col-sm-5 col-sm-offset-7 clearfix">
@@ -354,7 +357,7 @@ AppAsset::register($this);
                     </div>
                 </div>
 
-                <div id="section-works" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/demos/resume/images/sections/2.jpg') no-repeat center right; background-size: cover; padding: 100px 0">
+                <div id="section-works" class="section page-section nomargin clearfix" style="background: #EEE url('<?= Url::base() ?>/themes/canvas/demos/resume/images/sections/2.jpg') no-repeat center right; background-size: cover; padding: 100px 0">
                     <div class="container clearfix">
                         <div class="row clearfix">
                             <div class="col-md-5 col-md-offset-1">
@@ -365,24 +368,24 @@ AppAsset::register($this);
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
                                         <ul class="niche-demos-lists lists-1">
-                                            <li class="notopmargin"><a href="demo-restaurant.html"><img src="images/intro/niche/restaurant.jpg" alt="">Restaurant Demo</a></li>
-                                            <li><a href="demo-photography.html"><img src="images/intro/niche/photography.jpg" alt="">Photography</a></li>
-                                            <li><a href="demo-medical.html"><img src="images/intro/niche/medical.jpg" alt="">Medical</a></li>
-                                            <li><a href="demo-spa.html"><img src="images/intro/niche/spa.jpg" alt="">Spa</a></li>
-                                            <li><a href="demo-coffee.html"><img src="images/intro/niche/coffee.jpg" alt="">Coffee</a></li>
-                                            <li><a href="demo-interior-design.html"><img src="images/intro/niche/interior-design.jpg" alt="">Interior Design</a></li>
-                                            <li><a href="demo-barber.html"><img src="images/intro/niche/barber.jpg" alt="">Barber</a></li>
+                                            <li class="notopmargin"><a href="demo-restaurant.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/restaurant.jpg" alt="">Restaurant Demo</a></li>
+                                            <li><a href="demo-photography.html"><img src="<?= Url::base() ?>/themes/canvas/mages/intro/niche/photography.jpg" alt="">Photography</a></li>
+                                            <li><a href="demo-medical.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/medical.jpg" alt="">Medical</a></li>
+                                            <li><a href="demo-spa.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/spa.jpg" alt="">Spa</a></li>
+                                            <li><a href="demo-coffee.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/coffee.jpg" alt="">Coffee</a></li>
+                                            <li><a href="demo-interior-design.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/interior-design.jpg" alt="">Interior Design</a></li>
+                                            <li><a href="demo-barber.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/barber.jpg" alt="">Barber</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
                                         <ul class="niche-demos-lists lists-2">
-                                            <li><a href="demo-travel.html"><img src="images/intro/niche/travel.jpg" alt="">Travel</a></li>
-                                            <li><a href="demo-media-agency.html"><img src="images/intro/niche/media-agency.jpg" alt="">Media Agency</a></li>
-                                            <li><a href="demo-construction.html"><img src="images/intro/niche/construction.jpg" alt="">Construction</a></li>
-                                            <li><a href="demo-writer.html"><img src="images/intro/niche/writer.jpg" alt="">Writer</a></li>
-                                            <li><a href="demo-real-estate.html"><img src="images/intro/niche/real-estate/1.jpg" alt="">Real Estate</a></li>
-                                            <li><a href="demo-business.html"><img src="images/intro/niche/business.jpg" alt="">Business</a></li>
-                                            <li><a href="demo-app-landing.html"><img src="images/intro/niche/app-landing.jpg" alt="">App Landing</a></li>
+                                            <li><a href="demo-travel.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/travel.jpg" alt="">Travel</a></li>
+                                            <li><a href="demo-media-agency.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/media-agency.jpg" alt="">Media Agency</a></li>
+                                            <li><a href="demo-construction.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/construction.jpg" alt="">Construction</a></li>
+                                            <li><a href="demo-writer.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/writer.jpg" alt="">Writer</a></li>
+                                            <li><a href="demo-real-estate.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/real-estate/1.jpg" alt="">Real Estate</a></li>
+                                            <li><a href="demo-business.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/business.jpg" alt="">Business</a></li>
+                                            <li><a href="demo-app-landing.html"><img src="<?= Url::base() ?>/themes/canvas/images/intro/niche/app-landing.jpg" alt="">App Landing</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -409,7 +412,7 @@ AppAsset::register($this);
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="<?= Url::base() ?>/themes/demos/resume/images/blog/1.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="<?= Url::base() ?>/themes/canvas/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="<?= Url::base() ?>/themes/canvas/demos/resume/images/blog/1.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -426,7 +429,7 @@ AppAsset::register($this);
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/2.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="<?= Url::base() ?>/themes/canvas/demos/resume/images/blog/2.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -443,7 +446,7 @@ AppAsset::register($this);
 
                             <div class="entry nobottomborder nobottompadding clearfix" style="box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);">
                                 <div class="entry-image nobottommargin">
-                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="demos/resume/images/blog/3.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
+                                    <a href="<?= Url::base() ?>/themes/images/blog/full/17.jpg" data-lightbox="image"><img class="image_fade" src="<?= Url::base() ?>/themes/canvas/demos/resume/images/blog/3.jpg" alt="Standard Post with Image" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"></a>
                                 </div>
                                 <div style="background-color: #FFF; padding: 30px;border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
                                     <div class="entry-meta nomargin clearfix">
@@ -560,12 +563,12 @@ AppAsset::register($this);
 
     <!-- External JavaScripts
     ============================================= -->
-    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/jquery.js"></script>
-    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/plugins.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>/themes/canvas/js/jquery.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>/themes/canvas/js/plugins.js"></script>
 
     <!-- Footer Scripts
     ============================================= -->
-    <script type="text/javascript" src="<?= Url::base() ?>themes/canvas/js/functions.js"></script>
+    <script type="text/javascript" src="<?= Url::base() ?>/themes/canvas/js/functions.js"></script>
 
     <script>
         $(window).scroll(function() {
